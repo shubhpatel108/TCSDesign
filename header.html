@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The College Store</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.panel-heading').on("click", function (e) {
+            if ($(this).hasClass('panel-collapsed')) 
+			{
+                $(this).parents('.panel').find('.panel-body').slideDown();
+                $(this).removeClass('panel-collapsed');
+                $(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+            }
+            else {
+                $(this).parents('.panel').find('.panel-body').slideUp();
+                $(this).addClass('panel-collapsed');
+                $(this).find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+            }
+        });
+			});
+		</script>
+        <style type="text/css">
+            @import url(http://fonts.googleapis.com/css?family=Raleway);
+			.caption p
+			{
+				font-size:11px;
+			}
+            .carousel-slide
+            {
+                text-align: center;
+                width:100%;
+                height:500px;
+            }
+			.clickable
+			{
+				cursor:pointer;
+			}
+            body
+            {
+                /*margin-top:100px;*/
+                background-color: #EEC55C;
+                background-repeat: repeat;
+                font-family: "Raleway";
+            }
+            .navbar-brand,
+            .navbar-nav li a {
+                line-height: 75px;
+                height: 75px;
+                padding-top: 0;
+            }
+            .navbar-form
+            {
+                margin-top: 20px;
+            }
+            #page
+            {
+                margin-top:65px;
+            }
+            footer
+            {
+				margin-top:30px;
+                margin-bottom:0px;
+                background-color:#fff;
+                padding:40px;
+                text-align: center;
+            }
+            .footer-left
+            {
+                text-align: left;
+            }
+            .footer-right
+            {
+                text-align: right;
+            }
+            .center
+            {
+                text-align: center;
+            }
+            .social-icon
+            {
+                cursor: pointer;
+                margin-right:30px;
+            }
+			.sellers td,th
+			{
+				text-align:center;
+				vertical-align:middle !important;
+			}
+        </style>
+    </head>
+    <body>
+        <!--navbar-->
+        <header class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="../" class="navbar-brand"><img src="./backpack.png" width="50"/> The College Store</a>
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                        <i class='fa fa-bars'></i>
+                    </button>
+                </div>
+
+                <div class="navbar-collapse collapse" id="navbar-main">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" ><i class="fa fa-sign-in"></i> Login | Register</a></li>
+                        <li><a href="#" ><i class="fa fa-book"></i> Explore Books</a></li>
+                        <li><a href="#" ><i class='fa fa-shopping-cart'></i> Cart</a></li>
+                    </ul>
+                    <form class="navbar-form">
+                        <div class="input-group">
+                            <input class="form-control" name="search" placeholder="Search" autocomplete="off" autofocus="autofocus" type="text">
+                            <span class="input-group-addon"><span class="fa fa-search"></span></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!--navbar-->
