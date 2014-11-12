@@ -1,0 +1,56 @@
+<!--page wrapper-->
+<div id="page" class="container center-block">
+    <div class='row'>
+        <div class='col-md-3'>
+            <div class="panel">
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked" role="tablist">
+                        <li role="presentation"><a href="#"><i class="fa fa-fw fa-user"></i> My Profile</a></li>
+                        <li role="presentation" class="active"><a href="#"><i class="fa fa-edit fa-fw"></i> Edit Profile</a></li>
+                        <li role="presentation"><a href="#"><i class="fa fa-key fa-fw"></i> Change Password</a></li>
+                        <li role="presentation"><a href="#"><i class="fa fa-tag fa-fw"></i> My Coupons</a></li>
+                        <li role="presentation"><a href="#"><i class="fa fa-book fa-fw"></i> Books On Sale</a></li>
+                        <li role="presentation"><a href="#"><i class="fa fa-money fa-fw"></i> Purchased Books</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class='panel'>
+                <div class='panel-body'>
+                    <div class="row">
+                        <form class="form-horizontal">
+                            <fieldset>
+                                <legend style="margin-left:20px;">Edit Profile</legend>
+                                <div class='col-md-5'>
+                                    <label for="name">Name </label>
+                                    <input type="text" name="name" class="form-control" value="Existing Name"/>
+                                    <label for="mobile">Mobile Number</label>
+                                    <input type="text" name="mobile" class="form-control" value="+919726180450"/>
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" class="form-control" value="manan@lol.com"/>
+                                    <label for="clg">College </label>
+                                    <select name="clg" class="form-control">
+                                        <option>CLG1</option>
+                                        <option>CLG2</option>
+                                    </select>
+                                </div>
+                                <div class='col-md-5'>
+                                    <label>New Profile Image:</label>
+                                    <input type="file" class="form-control"/>
+                                    <label>Address</label>
+                                    <textarea rows="6" class="form-control" name="address"></textarea>
+                                    <br />
+                                    <div style="float:right;">
+                                        <button class="btn btn-warning">Cancel</button>
+                                        <button class="btn btn-success">Save</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
