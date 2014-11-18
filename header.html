@@ -7,23 +7,23 @@
         <link href="tcs.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$('.panel-heading').on("click", function (e) {
-            if ($(this).hasClass('panel-collapsed')) 
-			{
-                $(this).parents('.panel').find('.panel-body').slideDown();
-                $(this).removeClass('panel-collapsed');
-                $(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
-            }
-            else {
-                $(this).parents('.panel').find('.panel-body').slideUp();
-                $(this).addClass('panel-collapsed');
-                $(this).find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
-            }
-        });
-			});
-		</script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.panel-heading').on("click", function(e) {
+                    if ($(this).hasClass('panel-collapsed'))
+                    {
+                        $(this).parents('.panel').find('.panel-body').slideDown();
+                        $(this).removeClass('panel-collapsed');
+                        $(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+                    }
+                    else {
+                        $(this).parents('.panel').find('.panel-body').slideUp();
+                        $(this).addClass('panel-collapsed');
+                        $(this).find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+                    }
+                });
+            });
+        </script>
     </head>
     <body>
         <!--navbar-->
@@ -40,7 +40,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#" ><i class="fa fa-sign-in"></i> Login | Register</a></li>
                         <li><a href="#" ><i class="fa fa-book"></i> Explore Books</a></li>
-                        <li><a href="#" ><i class='fa fa-shopping-cart'></i> Cart</a></li>
+                        <li><a href="#" onclick="$('#shoppingCart').modal('show');"><i class='fa fa-shopping-cart'></i> Cart</a></li>
                     </ul>
                     <form class="navbar-form">
                         <div class="input-group">
@@ -52,3 +52,61 @@
             </div>
         </header>
         <!--navbar-->
+        <!-- cart modal-->
+        <div class="modal fade" id="shoppingCart">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header"><h4>My Shopping Cart <i class="fa fa-shopping-cart"></i><i data-dismiss="modal" class="clickable pull-right fa fa-close"></i></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class='row' id='results'>
+                        <div class="col-sm-3 col-lg-3 col-md-3">
+                            <div class="thumbnail">
+                                <img style='width:100px;height:150px;' src="http://img5a.flixcart.com/image/book/6/1/2/programming-in-ansi-c-6e-balaguruswamy-400x400-imadbm5su8rafr4z.jpeg" alt="">
+                                <div class="caption">
+                                    <h5 class="pull-right">&#8377;250</h5>
+                                    <h5>
+                                        <a href="#"><b>Programming in ANSI C</b></a>
+                                    </h5>
+                                    <p>
+                                        <b>Place: </b>  <a href='#'>Baroda</a>
+                                        <br/>
+                                        <b>Author: </b>  <a href='#'>E.Balaguruswamy</a>
+                                        <br/>
+                                        <b>Publisher: </b>  <a href='#'>MacMilan</a>
+                                        <br/>
+                                        <b>Edition: </b> VII
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-lg-3 col-md-3">
+                            <div class="thumbnail">
+                                <img style='width:100px;height:150px;' src="http://img5a.flixcart.com/image/book/6/1/2/programming-in-ansi-c-6e-balaguruswamy-400x400-imadbm5su8rafr4z.jpeg" alt="">
+                                <div class="caption">
+                                    <h5 class="pull-right">&#8377;250</h5>
+                                    <h5>
+                                        <a href="#"><b>Programming in ANSI C</b></a>
+                                    </h5>
+                                    <p>
+                                        <b>Place: </b>  <a href='#'>Baroda</a>
+                                        <br/>
+                                        <b>Author: </b>  <a href='#'>E.Balaguruswamy</a>
+                                        <br/>
+                                        <b>Publisher: </b>  <a href='#'>MacMilan</a>
+                                        <br/>
+                                        <b>Edition: </b> VII
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Checkout</button>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!-- cart modal-->

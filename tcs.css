@@ -3,6 +3,10 @@
 {
     font-size:11px;
 }
+.modal-dialog
+{
+    width:900px;
+}
 .book-bg
 {
     background-image: url('open-book.png');
